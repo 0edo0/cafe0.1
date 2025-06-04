@@ -1,0 +1,341 @@
+/* --- ESTILOS GENERALES Y RESETEO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/fondo_menu.png');
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* --- HEADER (BARRA DE NAVEGACIÓN SUPERIOR) --- */
+header {
+    font-family: cursive;
+    background-color: #1e1e1e;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+}
+
+/* --- LOGO EN HEADER --- */
+header .logo img {
+    height: 50px;
+}
+
+/* --- NAVEGACIÓN EN HEADER --- */
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #b0b0b0;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #9c7338; /* Lighter color on hover */
+}
+
+/* --- ICONO DEL CARRITO EN HEADER --- */
+.cart-icon .btncarrito {
+    background-color: #c49a6c;
+    color: #0a0a0a;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.2s ease-in-out;
+    line-height: 1;
+    height: 38px;
+    box-sizing: border-box;
+}
+
+.cart-icon .btncarrito:hover {
+    background-color: #523415;
+    color: #c49a6c;
+}
+
+/* --- CONTENIDO PRINCIPAL (MAIN) --- */
+main {
+    padding: 20px 5%;
+}
+
+/* --- TÍTULO PRINCIPAL "MENU" --- */
+.main-title {
+    text-align: center;
+    font-size: 3.5em;
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- GRILLA PARA LAS SECCIONES DEL MENÚ --- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+/* --- ESTILOS PARA CADA SECCIÓN (CAFES, BEBIDAS, TORTAS, SANDWICHES) --- */
+.menu-section {
+    background-color: #6d4c41;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.menu-section h2 {
+    text-align: center;
+    font-size: 2.2em;
+    color: #ffffff;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #c49a6c;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- CONTENEDOR DE ITEMS DENTRO DE CADA SECCIÓN --- */
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- TARJETAS INDIVIDUALES DE PRODUCTO (.menu-item) --- */
+.menu-item {
+    background-color: #d7ccc8;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: flex-start; /* Alinea imagen y detalles al inicio */
+    gap: 15px;
+    color: #3e2723;
+    transition: transform 0.2s ease-in-out;
+    min-height: 190px; /* Altura mínima para todas las tarjetas */
+    overflow: hidden;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+/* --- IMAGEN DENTRO DE LA TARJETA DE PRODUCTO --- */
+.menu-item img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #a1887f;
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+}
+
+/* --- DETALLES (TEXTO) DENTRO DE LA TARJETA DE PRODUCTO --- */
+.menu-item .item-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye espacio entre el bloque de título/desc y precio/rating */
+    height: 100%; /* Para que ocupe la altura del min-height del .menu-item */
+}
+
+/* --- TÍTULO DEL PRODUCTO (H3) --- */
+.menu-item h3 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* --- DESCRIPCIÓN DEL PRODUCTO --- */
+.menu-item .description {
+    font-size: 0.85em;
+    color: #4e342e;
+    line-height: 1.4;
+    flex-grow: 1; /* Hace que la descripción ocupe el espacio disponible */
+    overflow: hidden; /* Oculta texto si desborda (considerar -webkit-line-clamp para '...') */
+    margin-bottom: 8px; /* Espacio antes del contenedor de precio/rating */
+}
+
+
+/* --- PRECIO DEL PRODUCTO --- */
+.menu-item .price {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+/* --- CALIFICACIÓN (RATING) DEL PRODUCTO --- */
+.menu-item .rating {
+    font-size: 0.8em;
+    color: #5d4037;
+}
+
+.menu-item .rating .stars {
+    color: #fbc02d;
+    font-size: 1.2em;
+}
+
+/* --- FOOTER (PIE DE PÁGINA) --- */
+footer {
+    background-color: #4e342e;
+    color: #e0e0e0;
+    padding: 40px 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: left;
+}
+
+/* --- COLUMNAS DENTRO DEL FOOTER --- */
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    font-size: 1.3em;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #c49a6c;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.footer-column p {
+    font-size: 0.95em;
+    margin-bottom: 8px;
+    color: #d7ccc8;
+}
+
+/* --- ICONOS SOCIALES EN EL FOOTER --- */
+.footer-column .social-icon {
+    width: 45px;
+    height: 45px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.footer-column .social-icon:hover {
+    opacity: 0.8;
+}
+
+/* --- MEDIA QUERIES (ESTILOS RESPONSIVOS) --- */
+
+/* Para Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+    .menu-grid {
+        grid-template-columns: 1fr; /* Una columna */
+    }
+    .menu-section {
+        padding: 20px;
+    }
+    .main-title {
+        font-size: 2.8em;
+    }
+}
+
+/* Para Tablets pequeñas y móviles grandes */
+@media (max-width: 768px) {
+    /* Header responsivo */
+    header {
+        flex-direction: column;
+        padding: 15px 3%;
+    }
+    header nav {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header nav ul li {
+        margin: 5px 10px;
+    }
+
+    .main-title {
+        font-size: 2.2em;
+    }
+
+    /* Tarjetas de producto responsivas */
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        /* min-height: auto; Descomentar si se prefiere altura automática en móviles */
+    }
+    .menu-item img {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .menu-item .item-details {
+        width: 100%; /* Asegura que ocupe todo el ancho disponible en la columna */
+    }
+
+
+    /* Footer responsivo */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-column {
+        align-items: center;
+        text-align: center;
+    }
+    .footer-column h4 {
+        display: block;
+    }
+}
+
+/* Para Móviles pequeños */
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.8em;
+    }
+    .menu-section h2 {
+        font-size: 1.8em;
+    }
+    .menu-item h3 {
+        font-size: 1.1em;
+    }
+    .menu-item .description, .menu-item .price, .menu-item .rating {
+        font-size: 0.8em;
+    }
+    .menu-item {
+        min-height: auto; /* Altura automática para tarjetas en pantallas muy pequeñas */
+        /* O un min-height más pequeño si se prefiere: */
+        /* min-height: 160px; */
+    }
+}

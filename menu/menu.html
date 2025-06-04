@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Cafetería</title>
+    <!-- Ruta correcta a tu CSS del menú -->
+    <link rel="stylesheet" href="cssmenu/menustyle.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="URL_DEL_LOGO_PRINCIPAL" alt="Logo Cafetería"> <!-- Reemplaza URL_DEL_LOGO_PRINCIPAL -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">INICIO</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="../sobre nosotros/index.html">SOBRE NOSOTROS</a></li>
+                <li><a href="../sercicios/servicios.html">SERVICIOS</a></li>
+                <li><a href="../login-register/login.html">INICIO SESION</a></li>
+                <li><a href="../carrito/carrito.html" class="view-cart-link">VER CARRITO</a></li> <!-- Enlace al carrito -->
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <!-- Ruta correcta al carrito.html desde menu.html -->
+            <a href="../carrito/carrito.html" class="btncarrito-link">
+                <button class="btncarrito">🛒 Carrito (<span id="cart-count">0</span>)</button>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="main-title">MENU</h1>
+
+        <div class="menu-grid">
+            <section class="menu-section cafes-section">
+                <h2>Cafes</h2>
+                <div class="menu-items">
+                    <!-- Espresso -->
+                    <div class="menu-item" data-id="espresso" data-name="Espresso" data-price="2.50" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/cafes/expreso_i.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/cafes/expreso_i.png" alt="Espresso">
+                        <div class="item-details">
+                            <h3>Espresso</h3>
+                            <p class="description">Un café concentrado y fuerte, preparado con agua caliente y café molido.</p>
+                            <p class="price">Precio: 2.50 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Café americano -->
+                    <div class="menu-item" data-id="cafe-americano" data-name="Café americano" data-price="3.00" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/cafes/cafe_americano.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/cafes/cafe_americano.png" alt="Café americano">
+                        <div class="item-details">
+                            <h3>Café americano</h3>
+                            <p class="description">Un café que se prepara con agua caliente y espresso diluido.</p>
+                            <p class="price">Precio: 3.00 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Capuchino -->
+                    <div class="menu-item" data-id="capuchino" data-name="Capuchino" data-price="3.50" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/cafes/capuchino.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/cafes/capuchino.png" alt="Capuchino">
+                        <div class="item-details">
+                            <h3>Capuchino</h3>
+                            <p class="description">Un café preparado con espresso, leche vaporizada y espuma de leche.</p>
+                            <p class="price">Precio: 3.50 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Latte -->
+                    <div class="menu-item" data-id="latte" data-name="Latte" data-price="3.50" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/cafes/late.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/cafes/late.png" alt="Latte">
+                        <div class="item-details">
+                            <h3>Latte</h3>
+                            <p class="description">Un café preparado con espresso y leche vaporizada.</p>
+                            <p class="price">Precio: 3.50 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Moca -->
+                    <div class="menu-item" data-id="moca" data-name="Moca" data-price="4.00" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/cafes/moca.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/cafes/moca.png" alt="Moca">
+                        <div class="item-details">
+                            <h3>Moca</h3>
+                            <p class="description">Un café preparado con espresso, chocolate, leche y una capa de espuma.</p>
+                            <p class="price">Precio: 4.00 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Ristretto -->
+                    <div class="menu-item" data-id="ristretto" data-name="Ristretto" data-price="2.75" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/cafes/ristretto.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/cafes/ristretto.png" alt="Ristretto">
+                        <div class="item-details">
+                            <h3>Ristretto</h3>
+                            <p class="description">Un espresso más corto y concentrado.</p>
+                            <p class="price">Precio: 2.75 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Frappe -->
+                    <div class="menu-item" data-id="frappe" data-name="Frappe" data-price="4.50" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/cafes/frappe.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/cafes/frappe.png" alt="Frappe">
+                        <div class="item-details">
+                            <h3>Frappe</h3>
+                            <p class="description">Un café helado batido.</p>
+                            <p class="price">Precio: 4.50 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★☆</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="menu-section bebidas-section">
+                <h2>Bebidas</h2>
+                <div class="menu-items">
+                    <!-- Cerezada -->
+                    <div class="menu-item" data-id="cerezada" data-name="Cerezada" data-price="3.00" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/bebidas/cerezada.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/bebidas/cerezada.png" alt="Cerezada">
+                        <div class="item-details">
+                            <h3>Cerezada</h3>
+                            <p class="description">Bebida refrescante obtenida de la maceración y posterior prensado de cerezas.</p>
+                            <p class="price">Precio: 3.00 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Te verde -->
+                    <div class="menu-item" data-id="te-verde" data-name="Te verde" data-price="2.50" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/bebidas/te_verde.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/bebidas/te_verde.png" alt="Te verde">
+                        <div class="item-details">
+                            <h3>Te verde</h3>
+                            <p class="description">Una infusión obtenida de las hojas de la planta Camellia sinensis.</p>
+                            <p class="price">Precio: 2.50 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Jugo de Maracuya -->
+                    <div class="menu-item" data-id="jugo-maracuya" data-name="Jugo de Maracuya" data-price="3.20" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/bebidas/jugo%20de%20maracuya.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/bebidas/jugo%20de%20maracuya.png" alt="Jugo de Maracuya">
+                        <div class="item-details">
+                            <h3>Jugo de Maracuya</h3>
+                            <p class="description">Bebida refrescante y deliciosa, conocida por su sabor y su alto contenido de vitamina C.</p>
+                            <p class="price">Precio: 3.20 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Te matcha -->
+                    <div class="menu-item" data-id="te-matcha" data-name="Te matcha" data-price="3.80" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/bebidas/te_matcha.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/bebidas/te_matcha.png" alt="Te matcha">
+                        <div class="item-details">
+                            <h3>Te matcha</h3>
+                            <p class="description">Un té verde se muele con piedra hasta obtener un polvo fino.</p>
+                            <p class="price">Precio: 3.80 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                     <!-- Bubble tea -->
+                     <div class="menu-item" data-id="bubble-tea" data-name="Bubble tea" data-price="4.20" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/bebidas/dubble_tea.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/bebidas/dubble_tea.png" alt="Bubble tea">
+                        <div class="item-details">
+                            <h3>Bubble tea</h3>
+                            <p class="description">Una base de té mezclada con leche o fruta y cubierta con perlas de tapioca masticables.</p>
+                            <p class="price">Precio: 4.20 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Gaseosas -->
+                    <div class="menu-item" data-id="gaseosas" data-name="Gaseosas" data-price="2.00" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/bebidas/gaseosa.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/bebidas/gaseosa.png" alt="Gaseosas">
+                        <div class="item-details">
+                            <h3>Gaseosas</h3>
+                            <p class="description">Variedad de bebidas carbonatadas.</p>
+                            <p class="price">Precio: 2.00 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Agua -->
+                    <div class="menu-item" data-id="agua" data-name="Agua" data-price="1.50" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/bebidas/agua.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/bebidas/agua.png" alt="Agua">
+                        <div class="item-details">
+                            <h3>Agua</h3>
+                            <p class="description">Agua embotellada natural o con gas.</p>
+                            <p class="price">Precio: 1.50 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="menu-section tortas-section">
+                <h2>Tortas</h2>
+                <div class="menu-items">
+                    <!-- Torta de chocolate -->
+                    <div class="menu-item" data-id="torta-chocolate" data-name="Torta de chocolate" data-price="5.00" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/tortas/tortade%20chocolate.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/tortas/tortade%20chocolate.png" alt="Torta de chocolate">
+                        <div class="item-details">
+                            <h3>Torta de chocolate</h3>
+                            <p class="description">Un postre dulce a base de cacao que se prepara con rellenos y cubiertos de glaseado de chocolate.</p>
+                            <p class="price">Precio: 5.00 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Torta de fresa -->
+                    <div class="menu-item" data-id="torta-fresa" data-name="Torta de fresa" data-price="5.50" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/tortas/torta%20de%20fresa.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/tortas/torta%20de%20fresa.png" alt="Torta de fresa">
+                        <div class="item-details">
+                            <h3>Torta de fresa</h3>
+                            <p class="description">Un postre encantador y sumamente popular, que celebra la dulzura y el frescor de esta fruta.</p>
+                            <p class="price">Precio: 5.50 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Torta de maracuya -->
+                    <div class="menu-item" data-id="torta-maracuya" data-name="Torta de maracuya" data-price="5.20" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/tortas/torta%20de%20maracuya.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/tortas/torta%20de%20maracuya.png" alt="Torta de maracuya">
+                        <div class="item-details">
+                            <h3>Torta de maracuya</h3>
+                            <p class="description">Un pedazo de pastel con un tono amarillento, lo que sugiere un sabor cítrico y tropical de maracuyá.</p>
+                            <p class="price">Precio: 5.20 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Torta de moca -->
+                    <div class="menu-item" data-id="torta-moca" data-name="Torta de moca" data-price="5.30" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/tortas/torta%20de%20moca.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/tortas/torta%20de%20moca.png" alt="Torta de moca">
+                        <div class="item-details">
+                            <h3>Torta de moca</h3>
+                            <p class="description">Una porción de pastel que parece ser de café con un toque de chocolate, con un glaseado más claro.</p>
+                            <p class="price">Precio: 5.30 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                     <!-- Torta Tres Leches -->
+                     <div class="menu-item" data-id="torta-tres-leches" data-name="Torta Tres Leches" data-price="6.00" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/tortas/torta%20tres%20leches.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/tortas/torta%20tres%20leches.png" alt="Torta Tres Leches">
+                        <div class="item-details">
+                            <h3>Torta Tres Leches</h3>
+                            <p class="description">Una porción bizcocho esponjoso remojado en una mezcla de tres tipos de leche, cubierto con crema chantilly.</p>
+                            <p class="price">Precio: 6.00 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="menu-section sandwiches-section">
+                <h2>Sandwiches</h2>
+                 <div class="menu-items">
+                    <!-- Sandwich de pavo -->
+                    <div class="menu-item" data-id="sandwich-pavo" data-name="Sandwich de pavo" data-price="4.50" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/sandwuches/sandwich%20de%20pavo.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/sandwuches/sandwich%20de%20pavo.png" alt="Sandwich de pavo">
+                        <div class="item-details">
+                            <h3>Sandwich de pavo</h3>
+                            <p class="description">Un sándwich triangular tostado, mostrando capas de carne de pavo y otros ingredientes.</p>
+                            <p class="price">Precio: 4.50 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Sandwich de pollo, manzana y nuez -->
+                    <div class="menu-item" data-id="sandwich-pollo-manzana-nuez" data-name="Sandwich de pollo, manzana y nuez" data-price="5.50" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/sandwuches/Sandwich%20de%20pollo%2C%20manzana%20y%20nuez.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/sandwuches/Sandwich%20de%20pollo%2C%20manzana%20y%20nuez.png" alt="Sandwich de pollo, manzana y nuez">
+                        <div class="item-details">
+                            <h3>Sandwich de pollo, manzana y nuez</h3>
+                            <p class="description">Un sándwich abierto o cortado por la mitad que revela una mezcla de pollo, con posibles trozos de manzana y nueces.</p>
+                            <p class="price">Precio: 5.50 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Sandwich club -->
+                    <div class="menu-item" data-id="sandwich-club" data-name="Sandwich club" data-price="6.00" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/sandwuches/sandwich%20clud.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/sandwuches/sandwich%20clud.png" alt="Sandwich club">
+                        <div class="item-details">
+                            <h3>Sandwich club</h3>
+                            <p class="description">Un sándwich alto y complejo, cortado en triángulos, con múltiples capas de pan e ingredientes variados.</p>
+                            <p class="price">Precio: 6.00 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Sandwich de mozzarella y tomate -->
+                    <div class="menu-item" data-id="sandwich-mozzarella-tomate" data-name="Sandwich de mozzarella y tomate" data-price="4.80" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/sandwuches/sandwich%20de%20mozzarella%20y%20tomate.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/sandwuches/sandwich%20de%20mozzarella%20y%20tomate.png" alt="Sandwich de mozzarella y tomate">
+                        <div class="item-details">
+                            <h3>Sandwich de mozzarella y tomate</h3>
+                            <p class="description">Un sándwich que muestra queso mozzarella derretido y rodajas de tomate, posiblemente con albahaca o pesto.</p>
+                            <p class="price">Precio: 4.80 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                    <!-- Pan con Tortilla (de Huevo) -->
+                    <div class="menu-item" data-id="pan-con-tortilla" data-name="Pan con Tortilla (de Huevo)" data-price="3.50" data-img-src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/sandwuches/pan%20con%20tortilla.png">
+                        <div class="checkmark">✓</div>
+                        <img src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/menu/sandwuches/pan%20con%20tortilla.png" alt="Pan con Tortilla (de Huevo)">
+                        <div class="item-details">
+                            <h3>Pan con Tortilla (de Huevo)</h3>
+                            <p class="description">Tortilla de huevo casera en pan francés o de molde. Puedes ofrecer opciones con queso o jamón.</p>
+                            <p class="price">Precio: 3.50 $</p>
+                            <div class="rating">Calificación: <span class="stars">★★★★★</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-column">
+            <h4>Encuentranos en:</h4>
+            <p>Urb. Magisterio 2da Etapa, Avenida Humberto Vidal</p>
+            <p>Unda 1-3, Cusco 08003</p>
+        </div>
+        <div class="footer-column">
+            <h4>Síguenos en:</h4>
+            <div class="redes">
+            <a href="URL_TIKTOK" target="_blank"><img
+                    src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/tiktok.png"
+                    alt="TikTok"></a>
+            <a href="URL_WHATSAPP" target="_blank"><img
+                    src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/whatsapp.png"
+                    alt="WhatsApp"></a>
+            <a href="URL_INSTAGRAM" target="_blank"><img
+                    src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/instagran.png"
+                    alt="Instagram"></a>
+            <a href="URL_FACEBOOK" target="_blank"><img
+                    src="https://raw.githubusercontent.com/0edo0/imagnes_aplicacion_wed/refs/heads/main/facebook.png"
+                    alt="Facebook"></a>
+        </div>
+            <!-- Puedes añadir más iconos sociales aquí -->
+        </div>
+        <div class="footer-column">
+            <h4>Contactanos en:</h4>
+            <p>924-985-824</p>
+        </div>
+    </footer>
+    <!-- Ruta correcta a tu JS del menú -->
+    <script src="../menu/funcionalidad.js"></script>
+</body>
+</html>

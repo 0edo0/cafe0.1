@@ -1,0 +1,274 @@
+/* sercicios/css/servicios.css */
+
+/* --- Variables de Color y Fuentes (Consistente con otros estilos) --- */
+:root {
+    --color-background-page: #f4f0eb; /* Un fondo claro y cálido para la página */
+    --color-text-dark: #3a302b;       /* Texto oscuro principal */
+    --color-text-light: #f0eade;      /* Texto claro para fondos oscuros (header/footer) */
+    --color-header-bg: rgba(40, 32, 28, 0.95); /* Fondo del header, similar a otros */
+    --color-footer-bg: #2c2420;       /* Fondo del footer, similar a otros */
+    --color-card-bg: #ffffff;         /* Fondo de las tarjetas de servicio */
+    --color-primary-accent: #7fbc64;  /* Un acento verde (puedes cambiarlo) */
+    --color-shadow: rgba(0, 0, 0, 0.1);
+    --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --border-radius-cards: 8px;
+}
+
+/* --- Reset Mínimo y Estilos Base --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-background-page);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Para que el footer se quede abajo */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Header (Barra de Navegación - Estilo Consistente) --- */
+header.menu { /* Clase específica para el header de esta página si es necesario */
+    display: flex;
+    justify-content: center; /* Centrar la navegación si no hay logo */
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--color-header-bg);
+    color: var(--color-text-light);
+    box-shadow: 0 2px 6px var(--color-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Si decides añadir un logo al header de servicios, puedes descomentar y ajustar:
+header.menu .logo-container {
+    margin-right: auto; // Empuja la nav a la derecha
+}
+header.menu .logo-container img {
+    max-height: 40px;
+}
+*/
+
+header.menu nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espacio entre items para móviles */
+}
+
+header.menu nav ul li a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem; /* Un poco más pequeño para móviles */
+    padding: 0.5rem 0.3rem; /* Padding para que sea más fácil hacer clic */
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid transparent; /* Para efecto hover/active */
+}
+
+header.menu nav ul li a:hover,
+header.menu nav ul li a.active { /* Si tienes una clase para la página actual */
+    color: var(--color-primary-accent);
+    border-bottom-color: var(--color-primary-accent);
+}
+
+
+/* --- Contenedor Principal de Servicios --- */
+.services-container {
+    flex-grow: 1; /* Para que ocupe el espacio disponible */
+    max-width: 1200px;
+    width: 90%;
+    margin: 2rem auto; /* Margen superior/inferior y centrado */
+    padding: 1rem;
+}
+
+.services-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2rem; /* Tamaño para móviles */
+    font-weight: 700;
+    color: var(--color-text-dark);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+/* Línea decorativa debajo del título */
+.services-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-primary-accent);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+
+/* --- Grid de Servicios --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna en móviles */
+    gap: 1.5rem; /* Espacio entre tarjetas */
+}
+
+.service-card {
+    background-color: var(--color-card-bg);
+    border-radius: var(--border-radius-cards);
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 5px 15px var(--color-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+    margin-bottom: 1rem;
+    display: inline-block; /* Para centrar la imagen si es más pequeña que el div */
+}
+
+.service-icon img {
+    width: 80px; /* Tamaño del icono/imagen del servicio */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%; /* Iconos circulares */
+    border: 3px solid var(--color-background-page); /* Borde sutil */
+    box-shadow: 0 2px 5px var(--color-shadow);
+}
+
+.service-card h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 0.75rem;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: #555; /* Un gris más oscuro para el texto de la tarjeta */
+    line-height: 1.7;
+}
+
+/* --- Footer --- */
+footer.contactanos { /* Clase específica para el footer de esta página si es necesario */
+    background-color: var(--color-footer-bg);
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: auto; /* Asegura que el footer esté al final */
+}
+
+footer.contactanos .redes a {
+    display: inline-block;
+    margin: 0 0.8rem; /* Espacio entre iconos */
+}
+
+footer.contactanos .redes img {
+    width: 32px; /* Tamaño de los iconos sociales */
+    height: 32px;
+    opacity: 0.75;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+footer.contactanos .redes img:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+
+/* --- Media Queries para Responsividad --- */
+
+/* Tablets Pequeñas (ej. a partir de 576px) */
+@media (min-width: 576px) {
+    header.menu nav ul {
+        gap: 1.5rem; /* Más espacio entre items */
+    }
+    header.menu nav ul li a {
+        font-size: 0.95rem;
+        padding: 0.5rem 0.5rem;
+    }
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 1.8rem;
+    }
+    .services-title {
+        font-size: 2.2rem;
+    }
+    .service-card h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Tablets y Escritorios Pequeños (ej. a partir de 768px) */
+@media (min-width: 768px) {
+    header.menu {
+        padding: 1rem 2rem; /* Más padding en header */
+        justify-content: flex-end; /* Si no hay logo y quieres la nav a la derecha */
+    }
+     /* Si tienes logo, y quieres que esté a la izquierda y la nav a la derecha:
+    header.menu {
+        justify-content: space-between;
+    }
+    */
+    header.menu nav ul {
+        gap: 2rem;
+    }
+    header.menu nav ul li a {
+        font-size: 1rem;
+    }
+    .services-container {
+        width: 85%;
+        margin: 3rem auto;
+        padding: 1.5rem;
+    }
+    .services-title {
+        font-size: 2.5rem;
+    }
+    .service-icon img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+/* Escritorios Medianos (ej. a partir de 992px) */
+@media (min-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr); /* Cuatro columnas si hay espacio */
+        gap: 2rem;
+    }
+    .service-card {
+        padding: 2rem;
+    }
+    .service-card h2 {
+        font-size: 1.5rem;
+    }
+    .service-card p {
+        font-size: 1rem;
+    }
+}
+
+/* Escritorios Grandes (ej. a partir de 1200px) */
+@media (min-width: 1200px) {
+    .services-container {
+        width: 80%;
+    }
+}

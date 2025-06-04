@@ -1,0 +1,253 @@
+/* estilos.css */
+
+/* --- Variables de Color y Fuentes (Consistente con otros estilos) --- */
+:root {
+    --color-background-page: #f8f5f0; /* Fondo claro, ligeramente más cálido */
+    --color-text-dark: #4a3f35;       /* Texto oscuro principal, tono café */
+    --color-text-light: #f0eade;      /* Texto claro para fondos oscuros (header/footer) */
+    --color-header-bg: rgba(58, 48, 43, 0.95); /* Fondo del header, café oscuro */
+    --color-footer-bg: #3a302b;       /* Fondo del footer, café más oscuro */
+    --color-container-bg: #ffffff;    /* Fondo de los contenedores de sección */
+    --color-primary-accent: #a07c5b;  /* Un acento café más claro o dorado */
+    --color-shadow: rgba(0, 0, 0, 0.08);
+    --font-primary: 'Georgia', 'Times New Roman', Times, serif; /* Fuente con serifa para un toque clásico */
+    --font-secondary: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Para el header y botones */
+    --border-radius-main: 8px;
+}
+
+/* --- Reset Mínimo y Estilos Base --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-background-page);
+    color: var(--color-text-dark);
+    line-height: 1.7; /* Mayor interlineado para legibilidad */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Header (Barra de Navegación - Estilo Consistente) --- */
+header.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--color-header-bg);
+    color: var(--color-text-light);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: var(--font-secondary); /* Fuente diferente para el header */
+}
+
+header.menu nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espacio en móviles */
+}
+
+header.menu nav ul li a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.4rem;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.8px; /* Un poco más de espaciado */
+    border-bottom: 2px solid transparent;
+}
+
+header.menu nav ul li a:hover,
+header.menu nav ul li a.active {
+    color: var(--color-primary-accent);
+    border-bottom-color: var(--color-primary-accent);
+}
+
+/* --- Contenido Principal (Main) --- */
+main {
+    flex-grow: 1;
+    padding: 2rem 1rem; /* Padding para móviles */
+}
+
+/* Contenedor para detalles principales (si se usa) */
+.main-details {
+    /* Aquí podrías poner una imagen de cabecera o una breve introducción */
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+/* Ejemplo de estilo si añades una imagen en .main-details:
+.main-details img.hero-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius-main);
+    margin-bottom: 1rem;
+}
+.main-details h1.page-title {
+    font-size: 2.5rem;
+    color: var(--color-text-dark);
+    margin-bottom: 0.5rem;
+}
+*/
+
+/* Estilo para cada sección de contenido */
+.container {
+    background-color: var(--color-container-bg);
+    padding: 1.8rem; /* Padding interno */
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius-main);
+    box-shadow: 0 6px 18px var(--color-shadow);
+}
+.container:last-of-type { /* Para el último contenedor, como el del mapa */
+    margin-bottom: 0;
+}
+
+.container h2 {
+    font-size: 1.6rem; /* Tamaño para móviles */
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--color-primary-accent);
+    display: inline-block; /* Para que el borde solo ocupe el ancho del texto */
+}
+
+.container p {
+    font-size: 1rem; /* Tamaño para móviles */
+    color: #5c5046; /* Un tono de café más suave para el párrafo */
+    margin-bottom: 1rem;
+}
+.container p:last-child {
+    margin-bottom: 0;
+}
+
+/* Sección del Mapa */
+.location-map {
+    position: relative;
+    padding-bottom: 75%; /* Aspect ratio 4:3 (height / width * 100) */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius-main); /* Redondear el contenedor del mapa */
+    border: 1px solid #ddd; /* Borde sutil */
+}
+
+.location-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; /* Quitar borde por defecto del iframe */
+}
+
+/* --- Footer --- */
+footer.contactanos {
+    background-color: var(--color-footer-bg);
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer.contactanos .redes a {
+    display: inline-block;
+    margin: 0 0.8rem;
+}
+
+footer.contactanos .redes img {
+    width: 32px;
+    height: 32px;
+    opacity: 0.75;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+footer.contactanos .redes img:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+
+/* --- Media Queries para Responsividad --- */
+
+/* Tablets Pequeñas (ej. a partir de 576px) */
+@media (min-width: 576px) {
+    header.menu nav ul {
+        gap: 1.5rem;
+    }
+    header.menu nav ul li a {
+        font-size: 0.95rem;
+        padding: 0.5rem 0.5rem;
+    }
+    main {
+        padding: 2.5rem 1.5rem;
+    }
+    .container {
+        padding: 2rem;
+    }
+    .container h2 {
+        font-size: 1.8rem;
+    }
+    .container p {
+        font-size: 1.05rem;
+    }
+    .location-map {
+        padding-bottom: 60%; /* Ajustar aspect ratio si es necesario */
+    }
+}
+
+/* Tablets y Escritorios Pequeños (ej. a partir de 768px) */
+@media (min-width: 768px) {
+    header.menu {
+        padding: 1rem 2rem;
+        /* justify-content: flex-end; */ /* Si quieres la nav a la derecha sin logo */
+    }
+    header.menu nav ul {
+        gap: 2rem;
+    }
+    header.menu nav ul li a {
+        font-size: 1rem;
+    }
+    main {
+        max-width: 900px; /* Limitar ancho del contenido principal */
+        margin-left: auto;
+        margin-right: auto;
+        padding: 3rem 2rem;
+    }
+    .container h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Escritorios Medianos (ej. a partir de 992px) */
+@media (min-width: 992px) {
+    main {
+        padding: 3.5rem 2rem;
+    }
+    .container {
+        padding: 2.5rem;
+    }
+     .location-map {
+        padding-bottom: 50%; /* O la altura fija que desees, ej. height: 450px; padding-bottom: 0; */
+        /* height: 450px; */
+        /* padding-bottom: 0; */
+    }
+}
